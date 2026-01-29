@@ -140,6 +140,9 @@ body {
     width: 100%;
     max-width: 400px;
     height: 100vh;
+    /* Fallback */
+    height: 100dvh;
+    /* Dynamic viewport height for mobile */
     background: #1a1a2e;
     z-index: 2000;
     display: flex;
@@ -168,6 +171,8 @@ body {
 
 .editor-footer {
     padding: 1.5rem;
+    padding-bottom: calc(1.5rem + 20px + env(safe-area-inset-bottom));
+    /* Extra spacing for mobile nav */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     background: #161625;
 }

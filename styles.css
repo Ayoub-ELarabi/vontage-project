@@ -665,28 +665,94 @@ body {
 @media (max-width: 768px) {
     .global-header {
         padding: 1rem;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+        /* Allow height to grow */
+    }
+
+    .header-inner {
+        flex-direction: column;
+        height: auto;
         gap: 1rem;
     }
 
     .branding {
         order: 1;
+        margin: 0;
     }
 
     .header-nav {
         order: 2;
-        gap: 1rem;
+        gap: 1.5rem;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* allow wrapping if many links */
     }
 
     .header-search-container {
         order: 3;
+        position: relative;
+        /* Not absolute */
+        left: auto;
+        transform: none;
         margin: 0;
         max-width: 100%;
         width: 100%;
     }
 
     .app-container {
+        padding: 1rem;
+        /* Reduce padding */
         padding-top: 0 !important;
-        /* Override inline styles if any */
+        align-items: flex-start;
+        /* Prevent centering issues */
+    }
+
+    .glass-panel {
+        padding: 1.5rem 1rem;
+        /* Smaller padding inside cards */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Fix Edit Button Overlap */
+    .floating-edit {
+        position: relative;
+        /* Move into flow or adjust top */
+        top: 0;
+        right: 0;
+        transform: none;
+        margin-bottom: 1rem;
+        text-align: right;
+        width: 100%;
+        z-index: 900;
+    }
+
+    .floating-edit button {
+        width: auto;
+        /* Allow button to be natural width */
+    }
+
+    .profile-view {
+        margin-top: 1rem;
+    }
+
+    /* Fix Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pfp-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-header h1 {
+        font-size: 1.5rem;
     }
 }

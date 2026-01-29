@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Digital Identity: Beyond the Resume - Vontage Guides</title>
+    <meta name="description"
+        content="Why the traditional resume is dying and the curated bio link is becoming the new CV for the gig economy.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">The Future of Digital Identity: Beyond the Resume</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 6 min
+                read</p>
+
+            <div class="article-content">
+                <p>The standard PDF resume is a artifact of the 20th century. It lists where you went to school and who
+                    you worked for. But in the creator economy and the gig economy of 2026, people care less about your
+                    credentials and more about **what you have built**.</p>
+
+                <h2>The Portfolio is the New Degree</h2>
+                <p>Employers and clients want proof of work. They want to see your GitHub, your Dribbble shots, your
+                    YouTube tutorials, or your Substack essays. A Bio Link allows you to aggregate these disparate
+                    portfolio items into a single, cohesive identity.</p>
+
+                <h2>Dynamic > Static</h2>
+                <p>A resume is static. You update it once a year. A Vontage link is dynamic. You published a new viral
+                    video? Add it. You launched a new course? Pin it to the top. Your digital identity evolves as fast
+                    as you do.</p>
+
+                <h2>Trust through Transparency</h2>
+                <p>Social proof is powerful. Linking directly to your LinkedIn recommendations or your client
+                    testimonials builds trust faster than a bullet point on a CV saying "Excellent communication
+                    skills".</p>
+
+                <h2>Ownership of Traffic</h2>
+                <p>Social media algorithms change. Your reach can be throttled. By directing everyone to your own Bio
+                    Link, you create a layer of independence. You train your audience to look for your name, not just
+                    your content on a specific feed.</p>
+
+                <h2>Conclusion</h2>
+                <p>We are moving towards a decentralized digital identity where YOU are the platform. Tools like Vontage
+                    are the first step in claiming that real estate. Stop relying on a dusty PDF. Build a living,
+                    breathing portal to your work.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

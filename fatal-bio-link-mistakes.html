@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Fatal Mistakes You Are Making With Your Bio Link - Vontage</title>
+    <meta name="description"
+        content="Are you linking to dead pages? Is your font unreadable? Fix these common errors today.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">5 Fatal Mistakes You Are Making With Your Bio Link</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 5 min
+                read</p>
+
+            <div class="article-content">
+                <p>Is your bio link chasing away visitors? Check if you are guilty of these crimes.</p>
+
+                <h2>1. The "Link Graveyard"</h2>
+                <p>Linking to a blog post from 2022 that nobody reads anymore. Prune your links. If it hasn't been
+                    clicked in 3 months, delete it.</p>
+
+                <h2>2. Low Contrast Text</h2>
+                <p>Using grey text on a black background looks cool on your fancy monitor, but is unreadable on a phone
+                    in sunlight. Accessibility comes first. Vontage uses high-contrast text by default for this reason.
+                </p>
+
+                <h2>3. No Profile Photo</h2>
+                <p>People connect with faces. A generic logo or missing photo reduces trust. Use a high-quality
+                    headshot.</p>
+
+                <h2>4. Linking to "Home" Instead of "Product"</h2>
+                <p>If you talk about a specific shirt in your post, link to that shirt. Don't make the user hunt for it
+                    on your homepage. They won't.</p>
+
+                <h2>5. Ignoring Load Speed</h2>
+                <p>Using a tool that loads 5MB of scripts just to show 3 links. Keep it lightweight. Speed is a feature.
+                </p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

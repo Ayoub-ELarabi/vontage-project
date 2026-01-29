@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Touchless Menu: Bio Links for Restaurants and Cafes - Vontage</title>
+    <meta name="description"
+        content="Post-pandemic dining is digital. How to use Vontage to host your QR menu for free.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">The Touchless Menu: Bio Links for Restaurants and Cafes
+            </h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 4 min
+                read</p>
+
+            <div class="article-content">
+                <p>Paying $50/mo for a digital menu hosting service? Stop.</p>
+
+                <h2>The Free Alternative</h2>
+                <p>Upload your menu PDF to Google Drive. Set permissions to "Anyone with link". Paste that link into
+                    your Vontage profile. Done. You now have a free, updateable digital menu.</p>
+
+                <h2>Social Proof (Reviews)</h2>
+                <p>Add a link "Rate us on Google Maps". Catch happy customers before they leave the table. A direct link
+                    increases review volume significantly.</p>
+
+                <h2>Reservations</h2>
+                <p>Link directly to OpenTable or Resy. Don't make hungry people search for the booking button.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 3.0 and the Future of the Decentralized "Link in Bio" - Vontage</title>
+    <meta name="description" content="ENS domains, crypto wallets, and the future of identity on the blockchain.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Web 3.0 and the Future of the Decentralized "Link in
+                Bio"</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 6 min
+                read</p>
+
+            <div class="article-content">
+                <p>The current internet is rented. Web 3.0 is owned. How does this affect the humble bio link?</p>
+
+                <h2>ENS Domains</h2>
+                <p>`yourname.eth` is not just a wallet; it's a website. Tools are emerging that allow you to host your
+                    entire bio link profile directly on IPFS (InterPlanetary File System), meaning it can never be taken
+                    down by a centralized server.</p>
+
+                <h2>Wallet as Identity</h2>
+                <p>In the future, "following" someone might mean connecting your wallet to theirs. This enables direct
+                    micropayments without intermediaries (like Patreon or YouTube taking a cut).</p>
+
+                <h2>NFT Galleries</h2>
+                <p>For digital artists, the bio link is becoming a gallery. Embedding your OpenSea or Foundation
+                    collection directly allows users to bid on your work without leaving your profile.</p>
+
+                <h2>Conclusion</h2>
+                <p>We aren't there yet. But the shift from "Platform Centric" to "User Centric" identity is inevitable.
+                    Vontage's serverless architecture is a step in that direction—YOU hold the data (in the URL), not
+                    us.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

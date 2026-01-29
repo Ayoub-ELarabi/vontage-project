@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vontage - Bio Link Generator</title>
+    <meta name="description"
+        content="Create your own free bio link page with Vontage. Unlimited links, fully customizable, and free forever. The best free Linktree alternative.">
+    <meta name="keywords"
+        content="Free Linktree Alternative, Bio Link Generator, Social Media Landing Page, Link in Bio, Free Bio Link, Instagram Bio Link, TikTok Bio Link">
+    <meta name="author" content="Vontage">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="app-container" style="flex-direction: column; padding-top: 2rem;">
+
+        <!-- Editor Panel (Hidden by default in view mode) -->
+        <aside id="editorPanel" class="editor-panel hidden">
+            <div class="editor-header">
+                <h2>Edit Profile</h2>
+                <button id="closeEditorBtn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="editor-content">
+                <div class="form-group">
+                    <label>Profile Picture URL</label>
+                    <input type="text" id="pfpInput" placeholder="https://example.com/photo.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label>Username / Name</label>
+                    <input type="text" id="nameInput" placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Bio</label>
+                    <textarea id="bioInput" rows="3" placeholder="Tell us about yourself..."></textarea>
+                </div>
+
+                <div class="links-manager">
+                    <h3>Links</h3>
+                    <div id="linksListEditor">
+                        <!-- Link items will be injected here -->
+                    </div>
+                    <button id="addLinkBtn" class="btn secondary-btn">+ Add Link</button>
+                </div>
+            </div>
+
+            <div class="editor-footer">
+                <button id="generateBtn" class="btn primary-btn">Save & Generate URL</button>
+            </div>
+        </aside>
+
+        <!-- Preview / Live View -->
+        <section class="profile-view">
+            <div class="floating-edit">
+                <button id="editToggleBtn" class="btn glass-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+            </div>
+
+            <div class="profile-card glass-panel">
+                <div class="profile-header">
+                    <div class="pfp-container">
+                        <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile">
+                    </div>
+                    <h1 id="profileName">Your Name</h1>
+                    <p id="profileBio">Your bio goes here. Click 'Edit' to customize this page.</p>
+                </div>
+
+                <div id="linksContainer" class="links-container">
+                    <!-- Links will be injected here -->
+                </div>
+
+                <div class="branding">
+                    <a href="index.html" target="_blank"><span>Vontage</span></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AdSense / SEO Content Section -->
+    <section class="content-section">
+        <div class="article-container">
+            <h2>How to Use Vontage Bio-Link Generator</h2>
+            <p>Welcome to Vontage, the simplest and most elegant way to consolidate your digital presence into a single,
+                shareable link. Whether you are an influencer, a creator, or a professional, Vontage helps you direct
+                your audience to your most important content with style.</p>
+
+            <h3>Getting Started</h3>
+            <p>Creating your personal bio link page is incredibly intuitive. Here is a step-by-step guide to help you
+                build your profile in seconds:</p>
+            <ol>
+                <li><strong>Enter Edit Mode:</strong> Click the "Edit" button floating on the screen to open the
+                    customization panel.</li>
+                <li><strong>Profile Details:</strong> Input your name and a short bio that describes who you are. You
+                    can also paste a direct URL to your profile picture (from Instagram, LinkedIn, or any image host).
+                </li>
+                <li><strong>Add Links:</strong> Click the "Add Link" button to create new link slots. For each link,
+                    provide a Title (e.g., "My YouTube Channel") and the destination URL. You can add as many links as
+                    you need; Vontage is designed to handle unlimited links effortlessly.</li>
+                <li><strong>Generate & Share:</strong> Once you are satisfied with your setup, click "Save & Generate
+                    URL". The browser address bar will update with a unique link containing all your data. Copy this URL
+                    and place it in your Instagram bio, TikTok profile, or email signature.</li>
+            </ol>
+
+            <h3>Why Choose Vontage?</h3>
+            <p>Vontage is built with a "Privacy First, Cost Zero" philosophy. Unlike other bio-link services that
+                require account registration and monthly subscriptions:</p>
+            <ul>
+                <li><strong>No Database Required:</strong> Your data is stored directly within the URL itself using
+                    advanced encoding. We do not store your personal information on any server.</li>
+                <li><strong>Free Forever:</strong> Since there are no hosting costs associated with databases, this tool
+                    is completely free to use.</li>
+                <li><strong>Fully Customizable:</strong> The dark-mode aesthetic is designed to look premium on all
+                    devices, from desktop monitors to mobile screens.</li>
+                <li><strong>Instant Updates:</strong> Want to change a link? Just edit your page and generate a new URL.
+                    It is that simple.</li>
+            </ul>
+
+            <h3>Tips for a Better Bio Link</h3>
+            <p>To maximize engagement, keep your link titles short and punchy. Use a high-quality profile picture to
+                establish trust. Arrange your most important links at the top since they get the most clicks.
+                consistently updating your bio link ensures your audience always has access to your latest content.</p>
+
+            <h3>Frequently Asked Questions</h3>
+            <p><strong>Is Vontage really free?</strong><br>Yes. Because we do not host a database for your links, we
+                have zero server costs. This allows us to offer the tool completely free of charge.</p>
+
+            <p><strong>Can I use this for my business?</strong><br>Absolutely. Vontage is perfect for businesses,
+                freelancers, and agencies looking for a clean, branded link-in-bio solution without the monthly fees.
+            </p>
+
+            <p><strong>What happens if I lose my link?</strong><br>Because your data is encoded in the URL, if you lose
+                the link, you will need to recreate it. We recommend saving your generated Vontage link in a bookmark or
+                a notes app.</p>
+
+            <p class="disclaimer">Vontage is an open-source project designed for simplicity and performance.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Legal Modal -->
+    <div id="legalModal" class="legal-modal-overlay">
+        <div class="legal-modal">
+            <div class="legal-header">
+                <h2 id="legalTitle">Privacy Policy</h2>
+                <button id="closeLegalBtn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="legalContent" class="legal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Link copied to clipboard!</div>
+    <script src="script.js"></script>
+</body>
+
+</html>

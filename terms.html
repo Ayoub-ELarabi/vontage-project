@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Vontage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container">
+        <section class="glass-panel" style="max-width: 800px; width: 100%;">
+            <div class="branding">
+                <a href="index.html"><span>&larr; Back to Vontage</span></a>
+            </div>
+            <h1 style="margin: 2rem 0;">Terms of Service</h1>
+            <div class="legal-body">
+                <h3>1. Terms</h3>
+                <p>By accessing this Website, accessible from vontage.app, you are agreeing to be bound by these Website
+                    Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable
+                    local laws. If you disagree with any of these terms, you are prohibited from accessing this site.
+                </p>
+
+                <h3>2. Use License</h3>
+                <p>Permission is granted to temporarily download one copy of the materials on Vontage's Website for
+                    personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of
+                    title, and under this license you may not:</p>
+                <ul>
+                    <li>modify or copy the materials;</li>
+                    <li>use the materials for any commercial purpose or for any public display;</li>
+                    <li>attempt to reverse engineer any software contained on Vontage's Website;</li>
+                    <li>remove any copyright or other proprietary notations from the materials; or</li>
+                    <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
+                </ul>
+
+                <h3>3. Disclaimer</h3>
+                <p>All the materials on Vontage's Website are provided "as is". Vontage makes no warranties, may it be
+                    expressed or implied, therefore negates all other warranties. Furthermore, Vontage does not make any
+                    representations concerning the accuracy or likely results of the use of the materials on its Website
+                    or otherwise relating to such materials or on any sites linked to this Website.</p>
+
+                <h3>4. Limitations</h3>
+                <p>Vontage or its suppliers will not be hold accountable for any damages that will arise with the use or
+                    inability to use the materials on Vontage's Website, even if Vontage or an authorize representative
+                    of this Website has been notified, orally or written, of the possibility of such damage.</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

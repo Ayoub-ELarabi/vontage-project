@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Optimization: Ensuring High Conversion on Small Screens - Vontage</title>
+    <meta name="description"
+        content="99% of bio link traffic is mobile. Ensure your buttons, fonts, and layout are thumb-friendly.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Mobile-First Optimization: Ensuring High Conversion on
+                Small Screens</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 6 min
+                read</p>
+
+            <div class="article-content">
+                <p>Social media traffic is almost exclusively mobile. If your bio link page looks good on desktop but
+                    breaks on iPhone Mini, you are losing money.</p>
+
+                <h2>The "Thumb Zone"</h2>
+                <p>Users hold phones with one hand. The most clickable area is the bottom half of the screen. Put your
+                    most profitable links within easy reach of the thumb.</p>
+
+                <h2>Button Size Matters</h2>
+                <p>Touch targets should be at least 44px tall. Vontage's buttons are designed to be "fat finger proof",
+                    ensuring users don't accidentally click the wrong link.</p>
+
+                <h2>Readable Fonts</h2>
+                <p>Small decorative scripts are impossible to read on a phone. Stick to Sans-Serif fonts like Inter,
+                    Roboto, or Outfit (which we use) at a minimum size of 16px.</p>
+
+                <h2>Vertical Stacking</h2>
+                <p>Never place buttons side-by-side unless they are icons. Vertical lists are the native scrolling
+                    behavior of mobile users. Embrace the feed.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

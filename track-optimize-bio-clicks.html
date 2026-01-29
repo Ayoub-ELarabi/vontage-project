@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics 101: How to Track and Optimize Your Bio Clicks - Vontage</title>
+    <meta name="description"
+        content="What gets measured gets managed. Learn how to set up UTM parameters and track every click to your bio.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Analytics 101: How to Track and Optimize Your Bio Clicks
+            </h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 6 min
+                read</p>
+
+            <div class="article-content">
+                <p>Data is the difference between guessing and growing. Since Vontage is privacy-focused and serverless,
+                    we don't spy on your users. Here is how you can track them yourself.</p>
+
+                <h2>The Power of UTM Parameters</h2>
+                <p>Don't just link to `myshop.com`. Link to `myshop.com?utm_source=instagram&utm_medium=biolink`. This
+                    tells Google Analytics exactly where the traffic came from. You can see not just clicks, but how
+                    many of those clicks turned into sales.</p>
+
+                <h2>Shorteners with Stats</h2>
+                <p>Tools like Bit.ly or Dub.co provide free click tracking. Wrap your destination URL in a shortener,
+                    then paste that shortened URL into Vontage. Now you have a dashboard of click counts.</p>
+
+                <h2>Platform Insights</h2>
+                <p>Instagram and TikTok provide "Website Taps" metrics in their professional dashboards. Compare this
+                    number to your total profile views to calculate your "Profile Conversion Rate". If it's below 1%,
+                    you need a better CTA in your bio.</p>
+
+                <h2>A/B Testing</h2>
+                <p>Try changing your button text from "Shop" to "Get 50% Off" for one week. Check your click counts.
+                    Keep the winner. Rinse and repeat.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

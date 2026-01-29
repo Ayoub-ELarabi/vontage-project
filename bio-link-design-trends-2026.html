@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Bio Link Design Trends Taking Over 2026 - Vontage</title>
+    <meta name="description"
+        content="From glassmorphism to neo-brutalism, see what's hot in bio link design this year.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #ddd;
+        }
+
+        .article-content h2 {
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="global-header" style="width: 100%; padding: 1rem 2rem; background: rgba(0,0,0,0.2);">
+        <div class="header-inner">
+            <!-- Left: Branding -->
+            <div class="branding">
+                <a href="index.html">Vontage.</a>
+            </div>
+
+            <!-- Center: Search -->
+            <div class="header-search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="globalSearchInput" class="global-search-input" placeholder="Search guides...">
+            </div>
+
+            <!-- Right: Nav -->
+            <nav class="header-nav">
+                <a href="guides.html">Guides</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <div class="app-container" style="display: block; padding-top: 2rem;">
+                
+
+        <section class="glass-panel" style="max-width: 800px; margin: 0 auto; width: 100%;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Top 10 Bio Link Design Trends Taking Over 2026</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Published on January 28, 2026 &bull; 5 min
+                read</p>
+
+            <div class="article-content">
+                <p>Design moves fast. What looked modern in 2023 looks dated today. Here are the trends dominating the
+                    bio link space in 2026.</p>
+
+                <h2>1. Glassmorphism 2.0</h2>
+                <p>Translucent backgrounds with blur effects (like Vontage uses) remain king. They feel native to iOS
+                    and Android interfaces and offer a premium, futuristic look.</p>
+
+                <h2>2. Neo-Brutalism</h2>
+                <p>Hard shadows, stark outlines, and high-contrast colors. Popular with Gen Z creators and developers.
+                    It signals "I create, I don't conform".</p>
+
+                <h2>3. Video Backgrounds</h2>
+                <p>Static images are out. Low-bitrate looping video backgrounds bring a page to life. Motion captures
+                    attention immediately.</p>
+
+                <h2>4. Bento Grids</h2>
+                <p>Inspired by Apple's promotional videos. Instead of a list of links, creators are using square and
+                    rectangular grids to organize content visually. It turns a list into a dashboard.</p>
+
+                <h2>5. Minimalist Monochrome</h2>
+                <p>Black on white. Helvetica font. No distractions. The "luxury fashion house" aesthetic is making a
+                    comeback for high-end consultants and photographers.</p>
+            </div>
+        </section>
+
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.getElementById("globalSearchInput");
+            if (searchInput) {
+                searchInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        const query = e.target.value.trim();
+                        if (query) {
+                            window.location.href = `guides.html?q=${encodeURIComponent(query)}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    
+    <script src="script.js"></script>
+    <footer class="app-footer">
+        <p>&copy; 2026 Vontage. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="guides.html">Guides</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         pfp: "https://ui-avatars.com/api/?name=User&background=random",
         links: [
             { title: "My GitHub", url: "#" },
-            { title: "Contact Me", url: "mailto:labs.developing@gmail.com" }
+            { title: "Facebook", url: "https://facebook.com/" },
+            { title: "YouTube", url: "https://youtube.com/" }
         ]
     };
 

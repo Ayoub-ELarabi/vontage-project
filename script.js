@@ -50,21 +50,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // --- URL Persistence Logic (UTF-8 Safe) ---
+    // --- URL Persistence Logic (Compressed) ---
     function loadStateFromUrl() {
         const params = new URLSearchParams(window.location.search);
         const data = params.get('data');
         if (data) {
             try {
-                // Decode: Base64 -> URI Component -> String (Handles Emojis)
-                const jsonString = decodeURIComponent(escape(atob(data)));
-                const parsedState = JSON.parse(jsonString);
+                let jsonString;
+                // 1. Try Decompressing (New Format)
+                const decompressed = LZString.decompressFromEncodedURIComponent(data);
 
-                // Merge with default state
-                state = { ...state, ...parsedState };
+                if (decompressed) {
+                    jsonString = decompressed;
+                } else {
+                    // 2. Fallback to Old Format (Base64)
+                    try {
+                        jsonString = decodeURIComponent(escape(atob(data)));
+                    } catch (err) {
+                        // If both fail, it's invalid
+                        throw new Error("Invalid data format");
+                    }
+                }
+
+                if (jsonString) {
+                    const parsedState = JSON.parse(jsonString);
+                    // Merge with default state
+                    state = { ...state, ...parsedState };
+
+                    // Hide Edit Button for Generated Profiles
+                    if (elements.editToggleBtn) {
+                        elements.editToggleBtn.style.display = 'none';
+                    }
+                }
             } catch (e) {
                 console.error("Failed to load data from URL", e);
-                showToast("Error returning profile data");
+                showToast("Error retrieving profile data");
             }
         }
     }
@@ -72,21 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveStateToUrl() {
         try {
             const jsonString = JSON.stringify(state);
-            // Encode: String -> URI Component -> Base64 (Handles Emojis)
-            const encoded = btoa(unescape(encodeURIComponent(jsonString)));
+            // Compress: JSON String -> LZ-String Compressed URI
+            const compressed = LZString.compressToEncodedURIComponent(jsonString);
 
             // Construct new URL
-            const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?data=${encoded}`;
+            const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?data=${compressed}`;
 
             // Update browser history
             window.history.pushState({ path: newUrl }, '', newUrl);
 
             // Copy to clipboard
             navigator.clipboard.writeText(newUrl).then(() => {
-                showToast("Link details saved & URL copied!");
+                showToast("Link saved & URL copied (Shortened)!");
             }).catch(() => {
                 showToast("Profile saved! (Manual copy needed)");
             });
+
+            // Hide Edit Button after generation
+            if (elements.editToggleBtn) {
+                elements.editToggleBtn.style.display = 'none';
+            }
 
         } catch (e) {
             console.error("Failed to save data to URL", e);
@@ -157,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- State Updates ---
-    function updateStateFromEditor() {
+    function updateStateFromEditor(strict = true) {
         state.name = elements.nameInput.value;
         state.bio = elements.bioInput.value;
         state.pfp = elements.pfpInput.value || "https://ui-avatars.com/api/?name=" + encodeURIComponent(state.name);
@@ -169,7 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         titleInputs.forEach((input, index) => {
             const url = urlInputs[index].value;
-            if (input.value && url) {
+            // Strict mode (for generating): requires both title and url
+            // Non-strict mode (for editing): keeps everything so inputs don't vanish
+            if (!strict || (input.value && url)) {
                 newLinks.push({
                     title: input.value,
                     url: url
@@ -180,11 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function addLink() {
+        updateStateFromEditor(false); // Capture current inputs
         state.links.push({ title: "", url: "" });
         renderEditorLinks();
     }
 
     function removeLink(index) {
+        updateStateFromEditor(false); // Capture current inputs
         state.links.splice(index, 1);
         renderEditorLinks();
     }

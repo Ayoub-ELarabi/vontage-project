@@ -1,5 +1,5 @@
 
-$baseUrl = "https://vontage.app"
+$baseUrl = "https://vontage.netlify.app"
 $files = Get-ChildItem -Path . -Filter "*.html"
 $today = (Get-Date).ToString("yyyy-MM-dd")
 

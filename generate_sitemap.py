@@ -2,7 +2,7 @@
 import os
 import datetime
 
-BASE_URL = "https://vontage.app"
+BASE_URL = "https://vontage.netlify.app"
 
 def generate_sitemap():
     files = [f for f in os.listdir('.') if f.endswith('.html')]
